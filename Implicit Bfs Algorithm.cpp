@@ -46,7 +46,7 @@ void bfs(state st_node){
     dis.resize(n,vector<int>(m,1e9));
 
     queue<state> q;
-    Vis[st_node.F][st_node.S] = 1;
+    vis[st_node.F][st_node.S] = 1;
     dis[st_node.F][st_node.S] = 0;
     q.push(st_node);
     while(!q.empty()){
