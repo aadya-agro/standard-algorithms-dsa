@@ -13,8 +13,9 @@ void dfs(int node, int par){
     col[node] = 2;
     for(auto v : g[node]){
         if(col[v] == 1){
+            parent[v] = node;
             // node--v is a forward edge
-            dfs(v);
+            dfs(v,node);
         }
         else if(col[v] == 2){
             // node--v is a back edge
